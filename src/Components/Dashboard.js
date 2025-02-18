@@ -9,8 +9,8 @@ const Dashboard = () => {
     const { getIncomes, getExpenses, incomes, expenses, totalIncome, totalExpense, totalBalance } = useContext(GlobalContext)
 
     useEffect(()=>{
-        getIncomes()
-        getExpenses()
+      getIncomes()
+      getExpenses()
     },[])
 
     return (

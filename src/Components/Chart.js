@@ -8,7 +8,7 @@ import {Chart as ChartJs,
     Legend,
     ArcElement,
 } from 'chart.js'
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import {Line} from 'react-chartjs-2'
 import { GlobalContext } from '../context/GlobalContext'
 import { dateFormat } from '../utils/dateFromat'
@@ -27,7 +27,7 @@ ChartJs.register(
 
 const Chart = () => {
 
-    const {incomes, expenses, getIncomes, getExpenses} = useContext(GlobalContext)
+    const {incomes, expenses} = useContext(GlobalContext)
 
     const data = {
         labels : incomes.map((inc)=>{
