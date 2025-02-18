@@ -7,7 +7,7 @@ import { dateFormat } from '../utils/dateFromat';
 
 const Income = () => {
 
-    const { addIncome, incomes, getIncomes, deleteIncome, totalIncome } = useContext(GlobalContext)
+    const { incomes, getIncomes, deleteIncome, totalIncome } = useContext(GlobalContext)
 
     useEffect(() => {
         getIncomes()

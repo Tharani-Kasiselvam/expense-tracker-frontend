@@ -1,5 +1,4 @@
 import { InnerLayout } from '../styles/Layouts';
-import FormComponent from './FormComponent';
 import { useContext, useEffect } from 'react';
 import { GlobalContext } from '../context/GlobalContext';
 import { calender, rupee, trash } from '../utils/icons';
@@ -8,7 +7,7 @@ import ExpenseForm from './ExpenseForm';
 
 const Expense = () => {
 
-    const { addExpense, expenses, getExpenses, deleteExpense, totalExpense } = useContext(GlobalContext)
+    const { expenses, getExpenses, deleteExpense, totalExpense } = useContext(GlobalContext)
 
     useEffect(() => {
         getExpenses()

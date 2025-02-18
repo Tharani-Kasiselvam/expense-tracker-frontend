@@ -23,7 +23,7 @@ const ExpenseForm = () => {
             errors.amount = '*Amount should be Positive integer';
         }
 
-        if (values.category == "Select Option" || values.category == "") {
+        if (values.category === "Select Option" || values.category === "") {
             errors.category = '*Category is required';
         }
 
