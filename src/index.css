@@ -1,0 +1,356 @@
+.form_div {
+  width : 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    background: transparent;
+    resize: horizontal;
+    display: inline-block;
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+    color: rgba(34, 34, 96, 0.9);
+
+    &::placeholder {
+      color: rgba(34, 34, 96, 0.4);
+    }
+  }
+
+  label {
+    font-family: inherit;
+    font-size: 12px;
+    outline: none;
+    border: none;
+    padding: .5rem 1rem;
+    resize: none;
+  }
+}
+
+
+
+.input-control {
+  input {
+    width: 100%;
+  }
+}
+
+.selects {
+  select {
+    color: rgba(34, 34, 96, 0.4);
+
+    &:focus,
+    &:active {
+      color: rgba(34, 34, 96, 1);
+    }
+  }
+}
+
+.btn-form {
+  outline: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+  border-radius: 30px;
+  padding: .8rem 1.6rem;
+  background: var(--color-accent);
+  color: #473737;
+  font-weight: bold;
+
+  &:hover {
+    background: var(--color-green) !important;
+  }
+}
+
+.btn-income {
+  outline: none;
+  border: none;
+  color: '#fff';
+  border-radius: 50%;
+  font-family: inherit;
+  font-size: inherit;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  cursor: pointer;
+}
+
+
+.income-div {
+  display: flex;
+  overflow: auto;
+  background: #FCF6F9;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  color: #222260;
+}
+
+.tot-inc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FCF6F9;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 2rem;
+  gap: .5rem;
+
+  span {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-green);
+  }
+}
+
+.income-content {
+  display: flex;
+  gap: 2rem;
+}
+
+.content {
+  padding: 2rem;
+  background: rgba(252, 246, 249, 0.78);
+  border: 3px solid #FFFFFF;
+  backdrop-filter: blur(4.5px);
+  border-radius: 32px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: .2rem;
+  width : 100%;
+
+  h3 {
+    align-items: left;
+    font-size: 1.3rem;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: .8rem;
+      height: .8rem;
+      border-radius: 50%;
+    }
+  }
+}
+
+.inner-content {
+  display: flex;
+  /* flex-direction : column; */
+  justify-content: space-between;
+  align-items: center;
+
+  .text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap : wrap;
+    gap: 1.5rem;
+
+    /* width : 50%; */
+    p {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary-color);
+      opacity: 0.8;
+    }
+  }
+
+  .btn-income {
+    justify-content: flex-end;
+  }
+}
+
+.incomes {
+  padding-left: 1rem;
+  flex: 1;
+  flex-direction: column;
+  width : 100%
+}
+
+.col {
+  padding: 10px;
+  outline: none;
+  border: none;
+  resize: none;
+
+}
+
+.hist-style {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.history_item {
+  background: rgba(252, 246, 249, 0.78);
+  border: 3px solid #FFFFFF;
+  backdrop-filter: blur(4.5px);
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-size: 23px;
+
+  p {
+    margin-bottom: 0px;
+  }
+}
+
+.chart-div {
+  background: #FCF6F9;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+  border-radius: 20px;
+  height: 100%;
+}
+
+
+#stats-con {
+  .chart-con {
+    height: 250px;
+    margin-bottom: 10px;
+  }
+
+  .amount-con {
+    width: 100%;
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+
+    gap: 2rem;
+    margin-top: 2rem;
+    
+    .income,
+    .expense,
+    .balance {
+      background: #FCF6F9;
+      border: 2px solid #FFFFFF;
+      box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+      border-radius: 20px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0px;
+      }
+    }
+
+    .balance {
+
+      p {
+        color: var(--color-green);
+        opacity: 0.6;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .history-con {
+    h2 {
+      margin: 1rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .salary-title {
+      font-size: 20px;
+
+      span {
+        font-size: 20px;
+        padding: 1rem
+      }
+    }
+
+    .salary-item {
+      background: #FCF6F9;
+      border: 2px solid #FFFFFF;
+      box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+      padding: 1rem;
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+
+      p {
+        font-weight: 600;
+        font-size: 1rem;
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+
+.txn-cont{
+  width : 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+    h2 {
+    margin: 1rem 0;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+  }
+}
+
+
+.txn-Items{
+  background: rgba(252, 246, 249, 0.78);
+  border: 3px solid #FFFFFF;
+  backdrop-filter: blur(4.5px);
+  border-radius: 20px;
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  gap : 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-size: 23px;
+
+  p {
+    margin-bottom: 0px;
+  }
+}
