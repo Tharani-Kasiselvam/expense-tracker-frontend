@@ -29,11 +29,6 @@ const Chart = () => {
 
     const {incomes, expenses, getIncomes, getExpenses} = useContext(GlobalContext)
 
-    useEffect(()=>{
-        getIncomes()
-        getExpenses()
-    },[])
-
     const data = {
         labels : incomes.map((inc)=>{
             const {date} = inc

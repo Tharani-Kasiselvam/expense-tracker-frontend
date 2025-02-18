@@ -1,12 +1,17 @@
 import { InnerLayout } from '../styles/Layouts';
 import Chart from './Chart';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { GlobalContext } from '../context/GlobalContext';
 import History from './History';
 
 const Dashboard = () => {
 
-    const { incomes, expenses, totalIncome, totalExpense, totalBalance } = useContext(GlobalContext)
+    const { getIncomes, getExpenses, incomes, expenses, totalIncome, totalExpense, totalBalance } = useContext(GlobalContext)
+
+    useEffect(()=>{
+        getIncomes()
+        getExpenses()
+    },[])
 
     return (
         <div>
