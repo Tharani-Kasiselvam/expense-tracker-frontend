@@ -10,7 +10,7 @@ export const GlobalProvider = ({children}) => {
 
     const [incomes, setIncomes] = useState([])
     const [expenses, setExpenses] = useState([])
-    const [error, setError] = useState([])
+    const [error, setError] = useState("")
 
     //add Incomes
     const addIncome = async (incomeData) => {
@@ -102,7 +102,7 @@ export const GlobalProvider = ({children}) => {
 
     return <GlobalContext.Provider value = {{addIncome, incomes, getIncomes,deleteIncome, totalIncome, 
         addExpense, expenses, getExpenses, deleteExpense, totalExpense, 
-        totalBalance, transactionHistory, allTransactions
+        totalBalance, transactionHistory, allTransactions, error
     }}>
         {children}
     </GlobalContext.Provider>
