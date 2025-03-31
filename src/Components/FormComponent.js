@@ -1,7 +1,7 @@
 import { useFormik } from "formik"
-import DatePicker from "react-datepicker";
+import { DayPicker } from "react-day-picker";
 
-import "react-datepicker/dist/react-datepicker.css";
+import "react-day-picker/style.css";
 import { useGlobalContext } from '../context/GlobalContext';
 
 const FormComponent = () => {
@@ -95,7 +95,7 @@ const FormComponent = () => {
 
                             <div className='form-group'>
                                 <label htmlFor="Received Date">Date : </label>
-                                <DatePicker
+                                <DayPicker
                                     id='date'
                                     placeholderText='Select Date'
                                     dateFormat="dd/MM/yyyy"

@@ -1,8 +1,8 @@
 import { createContext, useContext, useState } from "react";
 import axios from 'axios'
 
-const BASE_URL = "http://localhost:5051/app/v1"
-// const BASE_URL = "https://expense-tracker-backend-ra91.onrender.com"
+// const BASE_URL = "http://localhost:5001/app/v1"
+const BASE_URL = "https://expense-tracker-backend-ra91.onrender.com/app/v1"
 
 export const GlobalContext = createContext()
 
