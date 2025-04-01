@@ -8,6 +8,7 @@ import ExpenseForm from './ExpenseForm';
 const Expense = () => {
 
     const { expenses, getExpenses, deleteExpense, totalExpense } = useContext(GlobalContext)
+    let index = 0
 
     useEffect(() => {
         getExpenses()
@@ -28,7 +29,7 @@ const Expense = () => {
                         <div className='col-lg-8'>
                             <div className='incomes'>
                             {expenses.map(expense =>
-                                <div className="content">
+                                <div className="content" key={index++}>
                                     <h3>{expense.category}</h3>
                                     <h6>{expense.title}</h6>
                                     <div className="inner-content">

@@ -9,6 +9,8 @@ const Income = () => {
 
     const { incomes, getIncomes, deleteIncome, totalIncome } = useContext(GlobalContext)
 
+    let index = 0
+
     useEffect(() => {
         getIncomes()
     }, [])
@@ -28,7 +30,7 @@ const Income = () => {
                         <div className='col-lg-8'>
                             <div className='incomes'>
                             {incomes.map(income =>
-                                <div className="content">
+                                <div className="content" key = {index++}>
                                     <h3>{income.category}</h3>
                                     <h6>{income.title}</h6>
                                     <div className="inner-content">

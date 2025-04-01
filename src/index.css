@@ -1,3 +1,47 @@
+.main{
+  flex: 1;
+  background: rgba(252, 246, 249, 0.78);
+  border: 3px solid #FFFFFF;
+  backdrop-filter: blur(4.5px);
+  border-radius: 32px;
+  overflow-x: hidden;
+  &::-webkit-scrollbar{
+    width: 0;
+  }
+}
+
+.app{
+    background-image: url("./img/bg.png");
+    height: 100vh;
+    position: relative;
+    padding-left : 2rem;
+}
+
+@keyframes moveOrb {
+        0%{
+            transform: translate(0, 0);
+        }
+        
+        100%{
+            transform: translate(0, 0);
+        }
+}
+
+.orb{
+    width: 70vh;
+    height: 70vh;
+    position: absolute;
+    border-radius: 50%;
+    margin-left: -37vh;
+    margin-top: -37vh;
+    background: linear-gradient(180deg, #F56692 0%, #F2994A 100%);
+    filter: blur(500px);
+    animation-name: moveOrb;
+    animation-duration : 15s;
+    animation-iteration-count: infinite;
+    /* alternate linear ; */
+  }
+
 .form_div {
   width : 100%;
   display: flex;

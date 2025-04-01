@@ -1,8 +1,9 @@
 import { createContext, useContext, useState } from "react";
 import axios from 'axios'
+import { useCallback } from "react";
 
-// const BASE_URL = "http://localhost:5001/app/v1"
-const BASE_URL = "https://expense-tracker-backend-ra91.onrender.com/app/v1"
+const BASE_URL = "http://localhost:5001/app/v1"
+// const BASE_URL = "https://expense-tracker-backend-ra91.onrender.com/app/v1"
 
 export const GlobalContext = createContext()
 
@@ -39,19 +40,25 @@ export const GlobalProvider = ({children}) => {
     }
 
 
-    //getIncomes
-    const getIncomes = async () => {
-        const incomeData = await axios.get(`${BASE_URL}/get-incomes`)
-            console.log("getIncome", incomeData.data)
-            setIncomes(incomeData.data)
-    }
+    const getIncomes = useCallback(async () => {
+        try {
+          const incomeData = await axios.get(`${BASE_URL}/get-incomes`);
+          console.log("getIncome", incomeData.data);
+          setIncomes(incomeData.data);
+        } catch (error) {
+          console.error("Error fetching incomes:", error);
+        }
+      }, []);
 
-    //getExpenses
-    const getExpenses = async () => {
-        const expenseData = await axios.get(`${BASE_URL}/get-expense`)
-        console.log("getExpenses",expenseData)
-        setExpenses(expenseData.data)
-    }
+    const getExpenses = useCallback(async () => {
+        try {
+          const expenseData = await axios.get(`${BASE_URL}/get-expense`);
+          console.log("getExpenses",expenseData)
+          setExpenses(expenseData.data)
+        } catch (error) {
+          console.error("Error fetching expenses:", error);
+        }
+      }, []);
 
     const deleteIncome = async (id) => {
         await axios.delete(`${BASE_URL}/delete-income/${id}`)
