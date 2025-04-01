@@ -12,7 +12,7 @@ const Expense = () => {
 
     useEffect(() => {
         getExpenses()
-    }, [])
+    }, [getExpenses])
 
     return (
         <div className='income-div'>
