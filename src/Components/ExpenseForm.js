@@ -1,7 +1,7 @@
 import { useFormik } from "formik"
-import { DayPicker } from "react-day-picker";
+// import { DayPicker } from "react-day-picker";
 
-import "react-day-picker/style.css";
+// import "react-day-picker/style.css";
 import { useGlobalContext } from '../context/GlobalContext';
 
 const ExpenseForm = () => {
@@ -53,7 +53,7 @@ const ExpenseForm = () => {
             amount: "",
             category: "",
             description: "",
-            date: new Date()
+            date: new Date().toISOString().split('T')[0]
         },
         validate,
         onSubmit: () => {
@@ -95,14 +95,13 @@ const ExpenseForm = () => {
 
                             <div className='form-group'>
                                 <label htmlFor="Expense Date">Date : </label>
-                                <DayPicker
-                                    id='date'
-                                    placeholderText='Select Date'
-                                    dateFormat="dd/MM/yyyy"
-                                    selected={formik.values.date}
-                                    onChange={dateVal => formik.setFieldValue('date', new Date(dateVal))}
+                                <input type="date"
+                                id='date'
+                                value={formik.values.date}
+                                onChange={(e) => formik.setFieldValue('date', e.target.value)}
                                 />
                             </div>
+                            {console.log("selected Exp date: ", formik.values.date)}
                             {formik.touched.date && formik.errors.date ? <div style={style}>{formik.errors.date}</div> : null}
                             <br />
                             <div className='selects form-group'>
