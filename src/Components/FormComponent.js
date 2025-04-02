@@ -1,7 +1,5 @@
 import { useFormik } from "formik"
-import { DayPicker } from "react-day-picker";
 
-import "react-day-picker/style.css";
 import { useGlobalContext } from '../context/GlobalContext';
 
 const FormComponent = () => {
